@@ -1,38 +1,66 @@
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require "correios_api/version"
+# -*- encoding: utf-8 -*-
+# stub: correios_api 0.0.1 ruby lib
 
-Gem::Specification.new do |spec|
-	spec.name          = "correios_api"
-	spec.version       = CorreiosECT::VERSION
-	spec.authors       = ["Renato Filho", "Pedro Fausto"]
-	spec.email         = ["renatosousafilho@gmail.com", "pedro.fausto@hotmail.com"]
-	spec.summary       = %q{Cliente ruby para api correios}
-	spec.description   = %q{Cliente ruby para api correios}
-	spec.homepage      = ""
-	spec.license       = "MIT"
+Gem::Specification.new do |s|
+  s.name = "correios_api".freeze
+  s.version = "0.0.1"
 
-	spec.files         = `git ls-files`.split($/)
-	spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
-	spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
+  s.required_rubygems_version = Gem::Requirement.new(">= 0".freeze) if s.respond_to? :required_rubygems_version=
+  s.require_paths = ["lib".freeze]
+  s.authors = ["Renato Filho".freeze, "Pedro Fausto".freeze]
+  s.date = "2020-07-29"
+  s.description = "Cliente ruby para api correios".freeze
+  s.email = ["renatosousafilho@gmail.com".freeze, "pedro.fausto@hotmail.com".freeze]
+  s.files = [".gitignore".freeze, ".ruby-gemset".freeze, ".ruby-version".freeze, "Gemfile".freeze, "Gemfile.lock".freeze, "README.md".freeze, "Rakefile".freeze, "correios_api.gemspec".freeze, "examples/teste_client.rb".freeze, "lib/correios_api.rb".freeze, "lib/correios_api/api.rb".freeze, "lib/correios_api/client.rb".freeze, "lib/correios_api/config.rb".freeze, "lib/correios_api/methods/busca_cliente.rb".freeze, "lib/correios_api/methods/calcula_preco_prazo.rb".freeze, "lib/correios_api/methods/consulta_cep.rb".freeze, "lib/correios_api/methods/digito_verificador_etiquetas.rb".freeze, "lib/correios_api/methods/fecha_plp.rb".freeze, "lib/correios_api/methods/solicita_etiquetas.rb".freeze, "lib/correios_api/methods/solicita_xml_plp.rb".freeze, "lib/correios_api/resource/calcula_preco_prazo.rb".freeze, "lib/correios_api/resource/plp.rb".freeze, "lib/correios_api/resource/postage.rb".freeze, "lib/correios_api/resource/receiver.rb".freeze, "lib/correios_api/resource/sender.rb".freeze, "lib/correios_api/response.rb".freeze, "lib/correios_api/version.rb".freeze]
+  s.homepage = "".freeze
+  s.licenses = ["MIT".freeze]
+  s.rubygems_version = "2.7.3".freeze
+  s.summary = "Cliente ruby para api correios".freeze
 
+  s.installed_by_version = "2.7.3" if s.respond_to? :installed_by_version
 
-	spec.require_paths = ["lib"]
+  if s.respond_to? :specification_version then
+    s.specification_version = 4
 
-	spec.add_dependency "recursive-open-struct"
-	spec.add_dependency "active_data"
-
-	spec.add_dependency 'net-http-persistent', '~> 2.9.4'
-	spec.add_dependency 'rack', '>= 1.6'
-	spec.add_dependency 'savon', '~> 2.11.1'
-	spec.add_dependency 'coveralls'
-	spec.add_dependency 'simplecov', '~> 0.9'
-	spec.add_dependency 'webmock', '~> 1.0'
-
-	spec.add_development_dependency "bundler"
-	spec.add_development_dependency "rake"
-	spec.add_development_dependency "rspec"
-	spec.add_development_dependency "pry"
-
-
+    if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
+      s.add_runtime_dependency(%q<recursive-open-struct>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<active_data>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<net-http-persistent>.freeze, ["~> 2.9.4"])
+      s.add_runtime_dependency(%q<rack>.freeze, [">= 1.6"])
+      s.add_runtime_dependency(%q<savon>.freeze, ["~> 2.11.1"])
+      s.add_runtime_dependency(%q<coveralls>.freeze, [">= 0"])
+      s.add_runtime_dependency(%q<simplecov>.freeze, ["~> 0.9"])
+      s.add_runtime_dependency(%q<webmock>.freeze, ["~> 1.0"])
+      s.add_development_dependency(%q<bundler>.freeze, [">= 0"])
+      s.add_development_dependency(%q<rake>.freeze, [">= 0"])
+      s.add_development_dependency(%q<rspec>.freeze, [">= 0"])
+      s.add_development_dependency(%q<pry>.freeze, [">= 0"])
+    else
+      s.add_dependency(%q<recursive-open-struct>.freeze, [">= 0"])
+      s.add_dependency(%q<active_data>.freeze, [">= 0"])
+      s.add_dependency(%q<net-http-persistent>.freeze, ["~> 2.9.4"])
+      s.add_dependency(%q<rack>.freeze, [">= 1.6"])
+      s.add_dependency(%q<savon>.freeze, ["~> 2.11.1"])
+      s.add_dependency(%q<coveralls>.freeze, [">= 0"])
+      s.add_dependency(%q<simplecov>.freeze, ["~> 0.9"])
+      s.add_dependency(%q<webmock>.freeze, ["~> 1.0"])
+      s.add_dependency(%q<bundler>.freeze, [">= 0"])
+      s.add_dependency(%q<rake>.freeze, [">= 0"])
+      s.add_dependency(%q<rspec>.freeze, [">= 0"])
+      s.add_dependency(%q<pry>.freeze, [">= 0"])
+    end
+  else
+    s.add_dependency(%q<recursive-open-struct>.freeze, [">= 0"])
+    s.add_dependency(%q<active_data>.freeze, [">= 0"])
+    s.add_dependency(%q<net-http-persistent>.freeze, ["~> 2.9.4"])
+    s.add_dependency(%q<rack>.freeze, [">= 1.6"])
+    s.add_dependency(%q<savon>.freeze, ["~> 2.11.1"])
+    s.add_dependency(%q<coveralls>.freeze, [">= 0"])
+    s.add_dependency(%q<simplecov>.freeze, ["~> 0.9"])
+    s.add_dependency(%q<webmock>.freeze, ["~> 1.0"])
+    s.add_dependency(%q<bundler>.freeze, [">= 0"])
+    s.add_dependency(%q<rake>.freeze, [">= 0"])
+    s.add_dependency(%q<rspec>.freeze, [">= 0"])
+    s.add_dependency(%q<pry>.freeze, [">= 0"])
+  end
 end
